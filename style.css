@@ -1,0 +1,152 @@
+/* MOBILE */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #224941 url('./img/04.jpg') no-repeat center center/cover;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 45px;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+} /* Unvisited link  */
+a:visited {
+  color: white;
+} /* Visited link    */
+a:hover {
+  color: white;
+} /* Mouse over link */
+a:active {
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  position: relative;
+  transform: scale(1);
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #87cefa 0%,
+    #00bfff 40%,
+    #b0c4de 40%,
+    #add8e6 60%,
+    #6495ed 60%,
+    #4682b4 100%
+  );
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -2;
+  border-radius: 50%;
+}
+
+.circle {
+  background-color: #191970;
+  /*background: radial-gradient(#4682b4, #0000cd);
+  background-image: linear-gradient(to bottom right, #00008b, #87cefa);*/
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 90px;
+  width: 20px;
+  height: 145px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+.pointer {
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+li {
+  margin: 10px;
+}
