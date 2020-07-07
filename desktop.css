@@ -9,7 +9,7 @@
     width: 320px;
   }
 
-  .pointer-container {
+  #pointer-container {
     position: absolute;
     top: -40px;
     left: 140px;
@@ -24,5 +24,9 @@
 
   button {
     font-size: 26px;
+  }
+
+  footer {
+    padding-top: 0px;
   }
 }

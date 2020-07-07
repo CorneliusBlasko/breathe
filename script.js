@@ -1,11 +1,12 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
-const totalTime = 7500;
+const totalTime = 7000;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
 const audio = document.getElementById('myAudio');
+let pointer = document.getElementById('pointer');
 
 breathAnimation();
 
@@ -24,6 +25,14 @@ function breathAnimation() {
 }
 
 setInterval(breathAnimation, totalTime);
+
+function stopCircle() {
+  if (document.getElementById('pointer').style.visibility == 'hidden') {
+    document.getElementById('pointer').style.visibility = 'visible';
+  } else {
+    document.getElementById('pointer').style.visibility = 'hidden';
+  }
+}
 
 function showBackgrounds() {
   console.log('Hello, world');
