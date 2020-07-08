@@ -11,7 +11,7 @@ body {
   background: #224941 url('./img/04.jpg') no-repeat center center/cover;
   color: #fff;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,9 +28,51 @@ button {
   outline: none;
 }
 
-#selectBackground {
-  font-size: 20px;
-  padding-top: 15px;
+#menuButton {
+  font-size: 30px;
+  margin-top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(203, 219, 230, 0.5);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  color: #4682b4;
+  margin: 20% auto;
+  padding: 10px;
+  width: 90%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modal-content p {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.gallery {
+  display: grid;
+  border-radius: 10px;
+}
+
+.gallery-desktop {
+  display: none;
+}
+
+.column {
+  margin: 0 -20px;
 }
 
 #homeButton {
@@ -87,9 +129,7 @@ a:active {
 }
 
 .circle {
-  background-color: #191970;
-  /*background: radial-gradient(#4682b4, #0000cd);
-  background-image: linear-gradient(to bottom right, #00008b, #87cefa);*/
+  background-image: linear-gradient(to bottom right, #1a5276, #6495ed);
   height: 100%;
   width: 100%;
   position: absolute;

@@ -12,7 +12,8 @@
     <title>Breathe</title>
   </head>
   <body>
-          <div id="title"><h1>Breathe</h1></div>
+    <button id="menuButton"><i class="fa fa-bars"></i></button>
+    <div id="title"><h1>Breathe</h1></div>
     <audio id="myAudio" crossOrigin="anonymous" src="./music/Track01.ogg" preload="auto"></audio>
     <button id="muteUnmute"><i class="fa fa-play"></i></button>
     <div class="container" id="container">
@@ -27,8 +28,48 @@
       <div class="gradient-circle"></div>
     </div>
     <button id="hideCircle" onclick="hideCircle()">Oculta la bola</i></span></button>
-    <button id="selectBackground" >Temas</i></span></button>
-    
+
+    <div id="themesModal" class="modal">
+      <div class="modal-content">
+        <p>Selecciona el fondo que más te guste</p>
+        <div class="gallery">
+          <ul>            
+            <div class="column">
+              <li><button id="thumb01" onclick="changeTheme('01')"><img src="./img/thumbnails/01_thumb.jpg"></button></li>
+              <li><button id="thumb02" onclick="changeTheme('02')"><img src="./img/thumbnails/02_thumb.jpg"></button></li>
+              <li><button id="thumb03" onclick="changeTheme('03')"><img src="./img/thumbnails/03_thumb.jpg"></button></li>
+              <li><button id="thumb04" onclick="changeTheme('04')"><img src="./img/thumbnails/04_thumb.jpg"></button></li>
+              <li><button id="thumb05" onclick="changeTheme('05')"><img src="./img/thumbnails/05_thumb.jpg"></button></li>
+            </div>            
+            <div class="column">
+              <li><button id="thumb06" onclick="changeTheme('06')"><img src="./img/thumbnails/06_thumb.jpg"></button></li>
+              <li><button id="thumb07" onclick="changeTheme('07')"><img src="./img/thumbnails/07_thumb.jpg"></button></li>
+              <li><button id="thumb08" onclick="changeTheme('08')"><img src="./img/thumbnails/08_thumb.jpg"></button></li>
+              <li><button id="thumb09" onclick="changeTheme('09')"><img src="./img/thumbnails/09_thumb.jpg"></button></li>
+              <li><button id="thumb10" onclick="changeTheme('10')"><img src="./img/thumbnails/10_thumb.jpg"></button></li>
+            </div>
+          </ul>
+        </div>
+        <div class="gallery-desktop">
+          <ul>            
+            <div class="column">
+              <li><button id="img01" onclick="changeTheme('01')"><img src="./img/01.jpg"></button></li>
+              <li><button id="img02" onclick="changeTheme('02')"><img src="./img/02.jpg"></button></li>
+              <li><button id="img03" onclick="changeTheme('03')"><img src="./img/03.jpg"></button></li>
+              <li><button id="img04" onclick="changeTheme('04')"><img src="./img/04.jpg"></button></li>
+              <li><button id="img05" onclick="changeTheme('05')"><img src="./img/05.jpg"></button></li>
+            </div>            
+            <div class="column">
+              <li><button id="img06" onclick="changeTheme('06')"><img src="./img/06.jpg"></button></li>
+              <li><button id="img07" onclick="changeTheme('07')"><img src="./img/07.jpg"></button></li>
+              <li><button id="img08" onclick="changeTheme('08')"><img src="./img/08.jpg"></button></li>
+              <li><button id="img09" onclick="changeTheme('09')"><img src="./img/09.jpg"></button></li>
+              <li><button id="img10" onclick="changeTheme('10')"><img src="./img/10.jpg"></button></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>    
     <footer>
       <div id="homeButton"><h4><a href="https://seccion13.com/">Home</a></h4></div>
     </footer>
