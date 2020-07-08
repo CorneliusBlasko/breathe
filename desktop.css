@@ -4,7 +4,27 @@
     width: 300px;
   }
 
-  .gradient-circle {
+  .gradient-circle-blue {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-red {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-grey {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-pink {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-green {
     height: 320px;
     width: 320px;
   }
@@ -28,5 +48,55 @@
 
   footer {
     padding-top: 0px;
+  }
+
+  #muteUnmute {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(203, 219, 230, 0.5);
+  }
+
+  .modal-content {
+    background-color: #f4f4f4;
+    color: #4682b4;
+    margin: 20% auto;
+    padding: 10px;
+    width: 90%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  }
+
+  .modal-content p {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .gallery-desktop {
+    display: grid;
+  }
+
+  .gallery-desktop img {
+    height: 70%;
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .modal p {
+    font-size: 30px;
+    text-align: center;
   }
 }
