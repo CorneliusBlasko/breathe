@@ -4,7 +4,27 @@
     width: 300px;
   }
 
-  .gradient-circle {
+  .gradient-circle-blue {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-red {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-grey {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-pink {
+    height: 320px;
+    width: 320px;
+  }
+
+  .gradient-circle-green {
     height: 320px;
     width: 320px;
   }

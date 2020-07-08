@@ -1,23 +1,3 @@
-/* Gradients for themes 01, 04 */
-
-let blue_1_1 = '#87cefa 0%';
-let blue_1_2 = '#00bfff 40%';
-let blue_2_1 = '#b0c4de 40%';
-let blue_2_2 = '#add8e6 60%';
-let blue_3_1 = '#6495ed 60%';
-let blue_3_2 = '#4682b4 100%';
-let blue_gradient_1 = '#1a5276';
-let blue_gradient_2 = '#6495ed';
-
-/* Gradients for themes 02 */
-
-let red_1_1 = '#ffa07a 0%';
-let red_1_2 = '#f08080 40%';
-let red_2_1 = '#fbcbcb 40%';
-let red_2_2 = '#fbb6b6 60%';
-let red_3_1 = '#fa8072 60%';
-let red_3_2 = '#cd5c5c 100%';
-
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
@@ -48,22 +28,74 @@ function clickOutside(e) {
 }
 
 function changeTheme(id) {
-  let backgroundValue;
   document.body.style.backgroundImage = "url('./img/" + id + ".jpg')";
-  if (id == '02') {
-    backgroundValue = getRedTheme();
-    document.getElementsByClassName(
-      'gradient-circle'
-    )[0].style.backgroundImage = backgroundValue;
-    console.log('backgroundValue: ' + backgroundValue);
-  } else if (id == 01 || id == 04) {
-    backgroundValue = getBlueTheme();
-    console.log('backgroundValue: ' + backgroundValue);
-    console.log(
-      'actual value: ' +
-        document.getElementsByClassName('gradient-circle')[0].style
-          .backgroundImage
-    );
+  if (id == '02' || id == '08') {
+    //RED
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-red');
+  } else if (id == '04' || id == '07') {
+    //BLUE
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-blue');
+  } else if (id == '03' || id == '09') {
+    //GREY
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-grey');
+  } else if (id == '01' || id == '05' || id == '06') {
+    //PINK
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-pink');
+  } else if (id == '10') {
+    //GREEN
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document.getElementById('gradient').classList.add('gradient-circle-green');
   }
   themesModal.style.display = 'none';
 }
@@ -120,40 +152,4 @@ function playPause(e) {
   } else {
     audio.play();
   }
-}
-
-function getRedTheme() {
-  return (
-    'conic-gradient(' +
-    red_1_1 +
-    ',' +
-    red_1_2 +
-    ',' +
-    red_2_1 +
-    ',' +
-    red_2_2 +
-    ',' +
-    red_3_1 +
-    ',' +
-    red_3_2 +
-    ');'
-  );
-}
-
-function getBlueTheme() {
-  return (
-    'conic-gradient(' +
-    blue_1_1 +
-    ',' +
-    blue_1_2 +
-    ',' +
-    blue_2_1 +
-    ',' +
-    blue_2_2 +
-    ',' +
-    blue_3_1 +
-    ',' +
-    blue_3_2 +
-    ');'
-  );
 }
