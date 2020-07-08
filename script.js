@@ -26,11 +26,13 @@ function breathAnimation() {
 
 setInterval(breathAnimation, totalTime);
 
-function stopCircle() {
+function hideCircle() {
   if (document.getElementById('pointer').style.visibility == 'hidden') {
     document.getElementById('pointer').style.visibility = 'visible';
+    document.getElementById('hideCircle').innerText = 'Oculta la bola';
   } else {
     document.getElementById('pointer').style.visibility = 'hidden';
+    document.getElementById('hideCircle').innerText = 'Muestra la bola';
   }
 }
 
@@ -39,6 +41,14 @@ function showBackgrounds() {
 }
 
 $('button').on('click tap', playPause);
+
+function startStop(e) {
+  if (document.getElementById('startStop').innerText == 'Empieza') {
+    document.getElementById('startStop').innerText = 'Para';
+  } else {
+    document.getElementById('startStop').innerText = 'Empieza';
+  }
+}
 
 function playPause(e) {
   $(this).find('.fa').toggleClass('fa, fa-pause fa, fa-play');
