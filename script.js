@@ -1,8 +1,6 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
-let color = '#808000';
-
 const totalTime = 7000;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
@@ -25,79 +23,6 @@ function clickOutside(e) {
   if (e.target == themesModal) {
     themesModal.style.display = 'none';
   }
-}
-
-function changeTheme(id) {
-  document.body.style.backgroundImage = "url('./img/" + id + ".jpg')";
-  if (id == '02' || id == '08') {
-    //RED
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-blue');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-grey');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-pink');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-green');
-    document.getElementById('gradient').classList.add('gradient-circle-red');
-  } else if (id == '04' || id == '07') {
-    //BLUE
-    document.getElementById('gradient').classList.remove('gradient-circle-red');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-grey');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-pink');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-green');
-    document.getElementById('gradient').classList.add('gradient-circle-blue');
-  } else if (id == '03' || id == '09') {
-    //GREY
-    document.getElementById('gradient').classList.remove('gradient-circle-red');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-blue');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-pink');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-green');
-    document.getElementById('gradient').classList.add('gradient-circle-grey');
-  } else if (id == '01' || id == '05' || id == '06') {
-    //PINK
-    document.getElementById('gradient').classList.remove('gradient-circle-red');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-blue');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-grey');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-green');
-    document.getElementById('gradient').classList.add('gradient-circle-pink');
-  } else if (id == '10') {
-    //GREEN
-    document.getElementById('gradient').classList.remove('gradient-circle-red');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-blue');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-grey');
-    document
-      .getElementById('gradient')
-      .classList.remove('gradient-circle-pink');
-    document.getElementById('gradient').classList.add('gradient-circle-green');
-  }
-  themesModal.style.display = 'none';
 }
 
 breathAnimation();
@@ -152,4 +77,102 @@ function playPause(e) {
   } else {
     audio.play();
   }
+}
+
+function changeTheme(id) {
+  document.body.style.backgroundImage = "url('./img/" + id + ".jpg')";
+  if (id == '02' || id == '08') {
+    //RED
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('circle').classList.remove('circle-blue');
+    document.getElementById('circle').classList.remove('circle-pink');
+    document.getElementById('circle').classList.remove('circle-grey');
+    document.getElementById('circle').classList.remove('circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-red');
+    document.getElementById('circle').classList.add('circle-red');
+  } else if (id == '04' || id == '07') {
+    //BLUE
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('circle').classList.remove('circle-red');
+    document.getElementById('circle').classList.remove('circle-pink');
+    document.getElementById('circle').classList.remove('circle-grey');
+    document.getElementById('circle').classList.remove('circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-blue');
+    document.getElementById('circle').classList.add('circle-blue');
+  } else if (id == '03' || id == '09') {
+    //GREY
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('circle').classList.remove('circle-red');
+    document.getElementById('circle').classList.remove('circle-blue');
+    document.getElementById('circle').classList.remove('circle-pink');
+    document.getElementById('circle').classList.remove('circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-grey');
+    document.getElementById('circle').classList.add('circle-grey');
+  } else if (id == '01' || id == '05' || id == '06') {
+    //PINK
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-green');
+    document.getElementById('circle').classList.remove('circle-red');
+    document.getElementById('circle').classList.remove('circle-blue');
+    document.getElementById('circle').classList.remove('circle-grey');
+    document.getElementById('circle').classList.remove('circle-green');
+    document.getElementById('gradient').classList.add('gradient-circle-pink');
+    document.getElementById('circle').classList.add('circle-pink');
+  } else if (id == '10') {
+    //GREEN
+    document.getElementById('gradient').classList.remove('gradient-circle-red');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-blue');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-grey');
+    document
+      .getElementById('gradient')
+      .classList.remove('gradient-circle-pink');
+    document.getElementById('circle').classList.remove('circle-pink');
+    document.getElementById('circle').classList.remove('circle-blue');
+    document.getElementById('circle').classList.remove('circle-red');
+    document.getElementById('circle').classList.remove('circle-grey');
+    document.getElementById('gradient').classList.add('gradient-circle-green');
+    document.getElementById('circle').classList.add('circle-green');
+  }
+  themesModal.style.display = 'none';
 }

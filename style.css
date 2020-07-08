@@ -200,8 +200,52 @@ a:active {
   border-radius: 50%;
 }
 
-.circle {
+.circle-blue {
   background-image: linear-gradient(to bottom right, #1a5276, #6495ed);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-red {
+  background-image: linear-gradient(to bottom right, #b03a2e, #ec7063);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-pink {
+  background-image: linear-gradient(to bottom right, #c71585, #db7093);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-grey {
+  background-image: linear-gradient(to bottom right, #566573, #abb2b9);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-green {
+  background-image: linear-gradient(to bottom right, #0e6655, #138d75);
   height: 100%;
   width: 100%;
   position: absolute;
