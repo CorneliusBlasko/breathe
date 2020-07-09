@@ -1,0 +1,43 @@
+:root {
+  /* GRADIENTS */
+  /* BLUE */
+  --blue_1_1: #87cefa 0%;
+  --blue_1_2: #00bfff 40%;
+  --blue_2_1: #b0c4de 40%;
+  --blue_2_2: #add8e6 60%;
+  --blue_3_1: #6495ed 60%;
+  --blue_3_2: #4682b4 100%;
+
+  /* RED */
+  --red_1_1: #ffa07a 0%;
+  --red_1_2: #f08080 40%;
+  --red_2_1: #fbcbcb 40%;
+  --red_2_2: #fbb6b6 60%;
+  --red_3_1: #fa8072 60%;
+  --red_3_2: #cd5c5c 100%;
+
+  /* GREY */
+  --grey_1_1: #c0c0c0 0%;
+  --grey_1_2: #808080 40%;
+  --grey_2_1: #dcdcdc 40%;
+  --grey_2_2: #c0c0c0 60%;
+  --grey_3_1: #778899 60%;
+  --grey_3_2: #2f4f4f 100%;
+
+  /* PINK */
+  --pink_1_1: #ffb6c1 0%;
+  --pink_1_2: #ff69b4 40%;
+  --pink_2_1: #d8bfd8 40%;
+  --pink_2_2: #dda0dd 60%;
+  --pink_3_1: #ff69b4 60%;
+  --pink_3_2: #db7093 100%;
+
+  /* GREEN */
+
+  --green_1_1: #48c9b0 0%;
+  --green_1_2: #17a589 40%;
+  --green_2_1: #abebc6 40%;
+  --green_2_2: #76d7c4 60%;
+  --green_3_1: #16a085 60%;
+  --green_3_2: #0e6655 100%;
+}

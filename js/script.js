@@ -53,10 +53,6 @@ function hideCircle() {
   }
 }
 
-function showBackgrounds() {
-  console.log('Hello, world');
-}
-
 $('button').on('click tap', playPause);
 
 function startStop(e) {
