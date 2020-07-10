@@ -12,9 +12,13 @@
     <title>Breathe</title>
   </head>
   <body>
-    <button id="menuButton"><i class="fa fa-bars"></i></button>
-    <div id="title"><h1>Breathe</h1></div>
-    <audio id="myAudio" crossOrigin="anonymous" src="https://seccion13.com/relaxapp/music/Track01.ogg" preload="auto"></audio>
+    <main>
+      <navbar>
+        <button id="menuButton"><i class="fa fa-bars"></i></button>
+        <div id="title"><h1>Breathe</h1></div>
+        <button id="languageButton"><i class="fa fa-globe"></i></button>
+      </navbar>
+    <audio id="myAudio" crossOrigin="anonymous" src="./music/Track01.ogg" preload="auto"></audio>
     <button id="muteUnmute"><i class="fa fa-play"></i></button>
     <div class="container" id="container">
       <div id="circle" class="circle-blue"></div>
@@ -32,7 +36,7 @@
 
     <div id="themesModal" class="modal">
       <div class="modal-content">
-        <p>Selecciona el fondo que más te guste</p>
+        <p id="themeSelectorLabel">Selecciona el fondo que más te guste</p>
         <div class="gallery">
           <ul>            
             <div class="column">
@@ -75,5 +79,7 @@
       <div id="homeButton"><h4><a href="https://seccion13.com/" target="_blank">Home</a></h4></div>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/themes.js"></script>
+  </main>
   </body>
 </html>
