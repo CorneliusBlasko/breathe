@@ -1,6 +1,7 @@
 /* MOBILE */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import 'colors.css';
 
 * {
   box-sizing: border-box;
@@ -8,7 +9,7 @@
 }
 
 body {
-  background: #224941 url('./img/04.jpg') no-repeat center center/cover;
+  background: #224941 url('../img/04.jpg') no-repeat center center/cover;
   color: #fff;
   min-height: 100vh;
   overflow: auto;
@@ -82,13 +83,13 @@ button {
 a {
   color: white;
   text-decoration: none;
-} /* Unvisited link  */
+}
 a:visited {
   color: white;
-} /* Visited link    */
+}
 a:hover {
   color: white;
-} /* Mouse over link */
+}
 a:active {
   color: white;
 }
@@ -112,12 +113,12 @@ a:active {
 
 .gradient-circle-blue {
   background: conic-gradient(
-    #87cefa 0%,
-    #00bfff 40%,
-    #b0c4de 40%,
-    #add8e6 60%,
-    #6495ed 60%,
-    #4682b4 100%
+    var(--blue_1_1),
+    var(--blue_1_2),
+    var(--blue_2_1),
+    var(--blue_2_2),
+    var(--blue_3_1),
+    var(--blue_3_2)
   );
   height: 220px;
   width: 220px;
@@ -130,12 +131,12 @@ a:active {
 
 .gradient-circle-red {
   background: conic-gradient(
-    #ffa07a 0%,
-    #f08080 40%,
-    #fbcbcb 40%,
-    #fbb6b6 60%,
-    #fa8072 60%,
-    #cd5c5c 100%
+    var(--red_1_1),
+    var(--red_1_2),
+    var(--red_2_1),
+    var(--red_2_2),
+    var(--red_3_1),
+    var(--red_3_2)
   );
   height: 220px;
   width: 220px;
@@ -148,12 +149,12 @@ a:active {
 
 .gradient-circle-grey {
   background: conic-gradient(
-    #c0c0c0 0%,
-    #808080 40%,
-    #dcdcdc 40%,
-    #c0c0c0 60%,
-    #778899 60%,
-    #2f4f4f 100%
+    var(--grey_1_1),
+    var(--grey_1_2),
+    var(--grey_2_1),
+    var(--grey_2_2),
+    var(--grey_3_1),
+    var(--grey_3_2)
   );
   height: 220px;
   width: 220px;
@@ -166,12 +167,12 @@ a:active {
 
 .gradient-circle-pink {
   background: conic-gradient(
-    #ffb6c1 0%,
-    #ff69b4 40%,
-    #d8bfd8 40%,
-    #dda0dd 60%,
-    #ff69b4 60%,
-    #db7093 100%
+    var(--pink_1_1),
+    var(--pink_1_2),
+    var(--pink_2_1),
+    var(--pink_2_2),
+    var(--pink_3_1),
+    var(--pink_3_2)
   );
   height: 220px;
   width: 220px;
@@ -184,12 +185,12 @@ a:active {
 
 .gradient-circle-green {
   background: conic-gradient(
-    #48c9b0 0%,
-    #17a589 40%,
-    #abebc6 40%,
-    #76d7c4 60%,
-    #16a085 60%,
-    #0e6655 100%
+    var(--green_1_1),
+    var(--green_1_2),
+    var(--green_2_1),
+    var(--green_2_2),
+    var(--green_3_1),
+    var(--green_3_2)
   );
   height: 220px;
   width: 220px;
@@ -200,8 +201,52 @@ a:active {
   border-radius: 50%;
 }
 
-.circle {
+.circle-blue {
   background-image: linear-gradient(to bottom right, #1a5276, #6495ed);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-red {
+  background-image: linear-gradient(to bottom right, #c0392b, #ec7063);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-pink {
+  background-image: linear-gradient(to bottom right, #c71585, #ffb6c1);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-grey {
+  background-image: linear-gradient(to bottom right, #83acc0, #a5c1d0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.circle-green {
+  background-image: linear-gradient(to bottom right, #0e6655, #17a589);
   height: 100%;
   width: 100%;
   position: absolute;
