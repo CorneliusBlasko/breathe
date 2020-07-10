@@ -264,7 +264,7 @@ a:active {
   left: 90px;
   width: 20px;
   height: 145px;
-  animation: rotate 7s linear forwards infinite;
+  animation: rotate 7.5s linear forwards infinite;
   transform-origin: bottom center;
 }
 
